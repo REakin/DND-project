@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="dbhandling.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="main-wrapper">
+        <div class="container-fluid bg-dark text-white main-wrapper">
+            <div class="row justify-content-center">
+                <div class="col-md-12 justify-content-center">
+                    <h1 class="text-center">Successfully loaded Quiver</h1>
+                    <p id="output"></p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 justify-content-center">
+                    <img src="../images/quiver.png" class="img-fluid justify-content-center"alt="quiver.png">
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row desc-row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <p>You drew a(n):</p><p class="lead" id="arrowtype">nothing</p>
+                    <p>Description:</p><p class="lead" id="arrowdesc">nothing</p>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row justify-content-center align-items-end flex-grow-1">
+                <button id="drawbutton" type="button" class="btn btn-primary btn-lg btn-block btn-outline-dark btn-height" onclick="senddrawreq()">Draw Arrow</button>
+            </div>
+            <div class="row"></div>
+            <div class="row justify-content-center align-items-end flex-grow-1">
+                <button type="button" class="btn btn-secondary btn-lg btn-block btn-outline-dark" onclick="history.back()">Return Home</button>
+            </div>
+        </div>
+        </div>
+    </body>
+    <style>
+        .main-wrapper{
+            min-height:100vh;
+        }
+        .desc-row{
+            min-height: 28.5vh;
+        }
+        .btn-height{
+            min-height: 20vh;
+        }
+    </style>
+</html>
